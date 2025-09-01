@@ -45,7 +45,7 @@ export default ssg.page(import.meta.url, async orb => {
 
       <div class="ca-line">
         <strong class="label">CA:</strong>
-        <span id="caText" class="value">GP9yLuDwte3dX1pVgwCy3rXGcG6U4KWZg7UvrhPD8ray</span>
+        <span id="caText" class="value">soon</span>
       </div>
     </div>
   </header>
