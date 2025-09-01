@@ -72,7 +72,7 @@ export default ssg.page(import.meta.url, async orb => {
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub1.png" alt="subject 01" />
-              <video muted playsinline loop preload="metadata" src="/assets/logo/sub1.mp4"></video>
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub111.mp4"></video>
             </div>
             <figcaption>
               <h3>subject 01</h3>
@@ -84,7 +84,7 @@ export default ssg.page(import.meta.url, async orb => {
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub2.png" alt="subject 02" />
-              <video muted playsinline loop preload="metadata" src="/assets/logo/sub22.mp4"></video>
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub222.mp4"></video>
             </div>
             <figcaption>
               <h3>subject 02</h3>
@@ -96,7 +96,7 @@ export default ssg.page(import.meta.url, async orb => {
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub3.png" alt="subject 03" />
-              <video muted playsinline loop preload="metadata" src="/assets/logo/sub3.mp4"></video>
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub333.mp4"></video>
             </div>
             <figcaption>
               <h3>subject 03</h3>
@@ -108,7 +108,7 @@ export default ssg.page(import.meta.url, async orb => {
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub4.png" alt="subject 04" />
-              <video muted playsinline loop preload="metadata" src="/assets/logo/sub4.mp4"></video>
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub444.mp4"></video>
             </div>
             <figcaption>
               <h3>subject 04</h3>
@@ -120,7 +120,7 @@ export default ssg.page(import.meta.url, async orb => {
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub55.png" alt="subject 05" />
-              <video muted playsinline loop preload="metadata" src="/assets/logo/sub5.mp4"></video>
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub555.mp4"></video>
             </div>
             <figcaption>
               <h3>subject 05</h3>
@@ -132,7 +132,7 @@ export default ssg.page(import.meta.url, async orb => {
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub6.png" alt="subject 06" />
-              <video muted playsinline loop preload="metadata" src="/assets/logo/sub66.mp4"></video>
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub666.mp4"></video>
             </div>
             <figcaption>
               <h3>subject 06</h3>
