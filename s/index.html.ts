@@ -32,10 +32,10 @@ export default ssg.page(import.meta.url, async orb => {
 
   <!-- TOPBAR -->
   <header id="topbar" class="topbar">
-    <div class="topbar-wrap">
-      <!-- NOWE: logo/tytuł po lewej -->
-      <div class="logo-title">$WHISP</div>
+    <!-- Logo przy lewym brzegu okna -->
+    <div class="logo-title">$WHISP</div>
 
+    <div class="topbar-wrap">
       <button id="copyCA" class="copy-btn" aria-label="Copy contract address">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
           <path d="M9 3h6a2 2 0 012 2v1h1a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2h1V5a2 2 0 012-2zm0 3h6V5H9v1z" fill="currentColor"/>
