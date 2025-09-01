@@ -137,11 +137,11 @@ export default ssg.page(import.meta.url, async orb => {
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub6.png" alt="subject 06" />
-              <video muted playsinline loop preload="metadata" src="/assets/logo/sub6.mp4"></video>
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub66.mp4"></video>
             </div>
             <figcaption>
               <h3>subject 06</h3>
-              <p>cause of death: followed shadows too far.</p>
+              <p>cause of death: eyes wide open, body too tired to follow.</p>
             </figcaption>
           </figure>
         </div>
