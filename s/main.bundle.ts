@@ -102,3 +102,6 @@ document.querySelectorAll<HTMLAnchorElement>(".social__btn").forEach(a => {
     if (e.key === " " || e.key === "Enter") { e.preventDefault(); a.click(); }
   });
 });
+document.querySelectorAll<HTMLAnchorElement>('.social__btn[href=""]').forEach(btn => {
+  btn.addEventListener('click', e => e.preventDefault());
+});
