@@ -3,7 +3,7 @@ import {constants} from "./constants.js"
 import {socialCard} from "./website/social-card.js"
 
 export default ssg.page(import.meta.url, async orb => {
-	const title = "Example"
+	const title = "theywhisper"
 
 	return ({
 		title,
