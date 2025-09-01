@@ -133,16 +133,16 @@ body{
 
 .card{
   margin:0; 
-  background:#fff;   /* biały background całej karty */
+  background:#000;   /* cała karta czarna */
   border:none; 
-  box-shadow:none;   /* usuń cień */
+  box-shadow:none;
 }
 
 .media{
   position:relative; 
   aspect-ratio:3/4; 
   overflow:hidden; 
-  background:#050505;
+  background:#000;   /* też czarne */
 }
 
 .media img, .media video{
@@ -152,6 +152,7 @@ body{
   height:100%; 
   object-fit:cover;
   display:block;
+  background:#000;   /* czarne tło pod obrazkiem/filmem */
 }
 
 .media video{ 
