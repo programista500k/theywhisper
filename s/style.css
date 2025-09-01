@@ -149,19 +149,19 @@ body{
 figcaption {
   padding:12px 12px 14px;
   text-align:left;
-  background:#fff;  /* biały pasek */
+  background:#000;  /* czarny pasek */
 }
 
 figcaption h3 {
   margin:0 0 6px;
   font-size:18px;
-  color:#000;   /* czarny tekst */
+  color:#fff;   /* biały tekst */
 }
 
 figcaption p {
   margin:0;
   font-size:14px;
-  color:#222;   /* ciemnoszary opis */
+  color:#fff;   /* biały opis */
 }
 
 /* Linki/akcje */
