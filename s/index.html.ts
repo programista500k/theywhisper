@@ -156,7 +156,14 @@ export default ssg.page(import.meta.url, async orb => {
       <img src="/assets/logo/pump.png" alt="Owl Tracker" loading="lazy">
     </a>
   </footer>
+  
+    <!-- DISCLAIMER -->
+  <p class="disclaimer">
+    $WHISP is a memecoin with no intrinsic value. Its only purpose is entertainment,
+    so you should invest only the amount you are willing to part with.
+  </p>
 </body>
+
 
 
 		`,

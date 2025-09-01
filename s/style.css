@@ -226,3 +226,20 @@ figcaption p {
   .social{ gap:10px; padding-bottom:40px; }
   .social__btn{ width:50px; height:50px; border-radius:12px; }
 }
+/* ===== Disclaimer ===== */
+.disclaimer{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px 28px;   /* ostatnia wartość = odstęp od dołu strony */
+  color: #9aa3a3;            /* szary jak na przykładzie */
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: .02em;
+  text-align: left;          /* jak na screenie; zmień na center jeśli chcesz wyśrodkować */
+  opacity: .95;
+}
+
+/* na większych ekranach odrobinę większa czcionka */
+@media (min-width: 768px){
+  .disclaimer{ font-size: 15px; }
+}
