@@ -88,3 +88,17 @@ function observePauseOffscreen(): void {
 
   $$(".media").forEach((m) => io.observe(m));
 }
+// Preload ikonek w stopce
+window.addEventListener("load", () => {
+  document.querySelectorAll<HTMLImageElement>(".social__btn img").forEach(img => {
+    const l = new Image();
+    l.src = img.src;
+  });
+});
+
+// Obsługa klawiatury (Enter/Space działa jak klik)
+document.querySelectorAll<HTMLAnchorElement>(".social__btn").forEach(a => {
+  a.addEventListener("keydown", (e) => {
+    if (e.key === " " || e.key === "Enter") { e.preventDefault(); a.click(); }
+  });
+});

@@ -23,11 +23,6 @@ export default ssg.page(import.meta.url, async orb => {
 			</script>
 		`,
 		body: html`
-<!-- ====== HEAD (w CodePen: wklej w panel HTML) ====== -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&display=swap" rel="stylesheet" />
-
 <body>
   <!-- INTRO: creepy face + tagline -->
   <div id="intro" aria-hidden="true">
@@ -73,19 +68,19 @@ export default ssg.page(import.meta.url, async orb => {
         <h2 class="grave-title">graveyard</h2>
 
         <div class="grid">
-          <!-- KARTA 01 -->
-<figure class="card">
-  <div class="media">
-    <img src="/assets/logo/sub1.png" alt="subject 01" />
-    <video muted playsinline loop preload="metadata" src="/assets/logo/sub1.mp4"></video>
-  </div>
-  <figcaption>
-    <h3>subject 01</h3>
-    <p>cause of death: every piece of her stored in someone else’s stomach.</p>
-  </figcaption>
-</figure>
+          <!-- subject 01 -->
+          <figure class="card">
+            <div class="media">
+              <img src="/assets/logo/sub1.png" alt="subject 01" />
+              <video muted playsinline loop preload="metadata" src="/assets/logo/sub1.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 01</h3>
+              <p>cause of death: every piece of her stored in someone else’s stomach.</p>
+            </figcaption>
+          </figure>
 
-          <!-- KARTA 02 -->
+          <!-- subject 02 -->
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub2.png" alt="subject 02" />
@@ -97,7 +92,7 @@ export default ssg.page(import.meta.url, async orb => {
             </figcaption>
           </figure>
 
-          <!-- KARTA 03 -->
+          <!-- subject 03 -->
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub3.png" alt="subject 03" />
@@ -109,7 +104,7 @@ export default ssg.page(import.meta.url, async orb => {
             </figcaption>
           </figure>
 
-          <!-- KARTA 04 -->
+          <!-- subject 04 -->
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub4.png" alt="subject 04" />
@@ -121,7 +116,7 @@ export default ssg.page(import.meta.url, async orb => {
             </figcaption>
           </figure>
 
-          <!-- KARTA 05 -->
+          <!-- subject 05 -->
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub55.png" alt="subject 05" />
@@ -133,7 +128,7 @@ export default ssg.page(import.meta.url, async orb => {
             </figcaption>
           </figure>
 
-          <!-- KARTA 06 -->
+          <!-- subject 06 -->
           <figure class="card">
             <div class="media">
               <img src="/assets/logo/sub6.png" alt="subject 06" />
@@ -147,20 +142,25 @@ export default ssg.page(import.meta.url, async orb => {
         </div>
       </div>
     </section>
-
-    <!-- LINKI -->
-    <section id="links" class="section compact">
-      <div class="container actions">
-        <a class="btn" href="https://twitter.com/vaultversecoin" target="_blank" rel="noopener noreferrer">
-          Twitter Community
-        </a>
-        <a class="btn ghost" href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-          pump.fun coin
-        </a>
-      </div>
-    </section>
   </main>
+
+  <!-- SOCIAL BAR -->
+  <footer class="social">
+    <a class="social__btn" href="https://t.me/yourchannel" target="_blank" rel="noopener">
+      <img src="/assets/icons/telegram.png" alt="Telegram" loading="lazy">
+    </a>
+    <a class="social__btn" href="https://x.com/yourprofile" target="_blank" rel="noopener">
+      <img src="/assets/icons/x.png" alt="X (Twitter)" loading="lazy">
+    </a>
+    <a class="social__btn" href="https://dexscreener.com/your-token" target="_blank" rel="noopener">
+      <img src="/assets/icons/owl.png" alt="Owl Tracker" loading="lazy">
+    </a>
+    <a class="social__btn" href="https://pump.fun/your-token" target="_blank" rel="noopener">
+      <img src="/assets/icons/pump.png" alt="pump.fun" loading="lazy">
+    </a>
+  </footer>
 </body>
+
 
 		`,
 	})

@@ -170,3 +170,25 @@ figcaption p{ margin:0; font-size:14px; color:#8aa198; }
   background: transparent !important;
   color: inherit !important;
 }
+/* ===== Social bar ===== */
+.social{
+  display:flex; justify-content:center; gap:14px;
+  padding:28px 16px 48px;
+}
+.social__btn{
+  width:54px; height:54px; flex:0 0 54px;
+  display:grid; place-items:center;
+  background:#fff; border:3px solid #000;
+  border-radius:14px; box-shadow:0 2px 0 #000, 0 8px 24px rgba(0,0,0,.35);
+  transition:transform .12s ease, filter .15s ease, box-shadow .15s ease;
+}
+.social__btn img{ width:60%; height:60%; object-fit:contain; display:block; }
+
+.social__btn:hover{ transform:translateY(-2px); filter:brightness(.92); }
+.social__btn:active{ transform:translateY(0); box-shadow:0 1px 0 #000, 0 6px 18px rgba(0,0,0,.4); }
+.social__btn:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-color:#000; }
+
+@media (max-width:420px){
+  .social{ gap:10px; padding-bottom:40px; }
+  .social__btn{ width:50px; height:50px; border-radius:12px; }
+}
