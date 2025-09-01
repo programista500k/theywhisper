@@ -2,7 +2,7 @@
 const $ = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
 const $$ = <T extends HTMLElement>(sel: string) => Array.from(document.querySelectorAll<T>(sel));
 
-/** Init po zakończeniu intro (zgrane z CSS: intro znika po ~2.2s + 1.2s) */
+/** Init po zakończeniu intro */
 window.addEventListener("load", () => {
   setTimeout(() => {
     initCopyCA();
@@ -25,7 +25,6 @@ function initCopyCA(): void {
       btn.innerHTML = "Copied";
       setTimeout(() => (btn.innerHTML = prev), 900);
     } catch {
-      // Fallback (np. ograniczenia iOS)
       prompt("Copy address:", ca);
     }
   });
@@ -59,7 +58,6 @@ function initGalleryHover(): void {
       box.addEventListener("focus", play, true);
       box.addEventListener("blur", stop, true);
     } else {
-      // Mobile: tap toggle
       box.addEventListener("click", (e) => {
         e.preventDefault();
         if (box.classList.contains("playing")) stop();
@@ -85,10 +83,10 @@ function observePauseOffscreen(): void {
     },
     { threshold: 0.05 }
   );
-
   $$(".media").forEach((m) => io.observe(m));
 }
-// Preload ikonek w stopce
+
+/* Preload ikonek w stopce */
 window.addEventListener("load", () => {
   document.querySelectorAll<HTMLImageElement>(".social__btn img").forEach(img => {
     const l = new Image();
@@ -96,12 +94,14 @@ window.addEventListener("load", () => {
   });
 });
 
-// Obsługa klawiatury (Enter/Space działa jak klik)
+/* Obsługa klawiatury dla przycisków w stopce */
 document.querySelectorAll<HTMLAnchorElement>(".social__btn").forEach(a => {
   a.addEventListener("keydown", (e) => {
     if (e.key === " " || e.key === "Enter") { e.preventDefault(); a.click(); }
   });
 });
+
+/* Gdyby gdzieś pozostały puste href="", zablokuj klik */
 document.querySelectorAll<HTMLAnchorElement>('.social__btn[href=""]').forEach(btn => {
   btn.addEventListener('click', e => e.preventDefault());
 });

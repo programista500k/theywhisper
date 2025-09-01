@@ -3,41 +3,39 @@ import {constants} from "./constants.js"
 import {socialCard} from "./website/social-card.js"
 
 export default ssg.page(import.meta.url, async orb => {
-	const title = "theywhisper"
+  const title = "theywhisper"
 
-	return ({
-		title,
-		css: "style.css",
-		js: "main.bundle.min.js",
-		favicon: constants.favicon,
-		dark: true,
-		socialCard: socialCard(title),
-		head: html`
-			<meta data-version="${await orb.packageVersion("$/package.json")}"/>
+  return ({
+    title,
+    css: "style.css",
+    js: "main.bundle.min.js",
+    favicon: constants.favicon,
+    dark: true,
+    socialCard: socialCard(title),
+    head: html`
+      <meta data-version="${await orb.packageVersion("$/package.json")}"/>
 
-			<!-- fonts for Body experience -->
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&display=swap" rel="stylesheet">
-			<script>
-			</script>
-		`,
-		body: html`
+      <!-- fonts for Body experience -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&display=swap" rel="stylesheet">
+      <script></script>
+    `,
+    body: html`
 <body>
   <!-- INTRO: creepy face + tagline -->
   <div id="intro" aria-hidden="true">
     <div class="scan"></div>
-    <img
-      class="intro-face"
-      src="https://i.postimg.cc/qRmy5nrr/unnamed.png"
-      alt="creepy face"
-    />
+    <img class="intro-face" src="https://i.postimg.cc/qRmy5nrr/unnamed.png" alt="creepy face" />
     <p class="intro-tag">you are not supposed to be here</p>
   </div>
 
-  <!-- TOPBAR: CA – wyśrodkowany; Copy po lewej -->
+  <!-- TOPBAR -->
   <header id="topbar" class="topbar">
     <div class="topbar-wrap">
+      <!-- NOWE: logo/tytuł po lewej -->
+      <div class="logo-title">$WHISP</div>
+
       <button id="copyCA" class="copy-btn" aria-label="Copy contract address">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
           <path d="M9 3h6a2 2 0 012 2v1h1a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2h1V5a2 2 0 012-2zm0 3h6V5H9v1z" fill="currentColor"/>
@@ -47,15 +45,13 @@ export default ssg.page(import.meta.url, async orb => {
 
       <div class="ca-line">
         <strong class="label">CA:</strong>
-        <span id="caText" class="value">
-          just launched
-        </span>
+        <span id="caText" class="value">just launched</span>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO: flicker line -->
+    <!-- HERO -->
     <section id="hero" class="section">
       <div class="container">
         <h1 class="flicker">this room was meant to stay dark.</h1>
@@ -144,33 +140,30 @@ export default ssg.page(import.meta.url, async orb => {
     </section>
   </main>
 
-<!-- SOCIAL BAR -->
-<footer class="social">
-  <!-- Telegram (nieklikalny link) -->
-  <span class="social__btn" role="button">
-    <img src="/assets/logo/telegram.png" alt="Telegram" loading="lazy">
-  </span>
+  <!-- SOCIAL BAR -->
+  <footer class="social">
+    <!-- Telegram – nieklikalny -->
+    <span class="social__btn" role="button" tabindex="0" aria-label="Telegram">
+      <img src="/assets/logo/telegram.png" alt="Telegram" loading="lazy">
+    </span>
 
-  <!-- X (Twitter) -->
-  <a class="social__btn" href="https://x.com/trenchtroll452" target="_blank" rel="noopener">
-    <img src="/assets/logo/x.png" alt="X (Twitter)" loading="lazy">
-  </a>
+    <!-- X (Twitter) -->
+    <a class="social__btn" href="https://x.com/trenchtroll452" target="_blank" rel="noopener">
+      <img src="/assets/logo/x.png" alt="X (Twitter)" loading="lazy">
+    </a>
 
-  <!-- Pump -->
-  <a class="social__btn" href="https://pump.fun" target="_blank" rel="noopener">
-    <img src="/assets/logo/pump.png" alt="Pump" loading="lazy">
-  </a>
-</footer>
-  
-    <!-- DISCLAIMER -->
+    <!-- Pump -->
+    <a class="social__btn" href="https://dexscreener.com" target="_blank" rel="noopener">
+      <img src="/assets/logo/pump.png" alt="Pump" loading="lazy">
+    </a>
+  </footer>
+
+  <!-- DISCLAIMER -->
   <p class="disclaimer">
     $WHISP is a memecoin with no intrinsic value. Its only purpose is entertainment,
     so you should invest only the amount you are willing to part with.
   </p>
 </body>
-
-
-
-		`,
-	})
+    `,
+  })
 })

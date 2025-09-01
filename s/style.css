@@ -53,7 +53,7 @@ body{
 }
 @keyframes introHide{ to{ opacity:0; visibility:hidden } }
 
-/* ===== TOP BAR: full black + Copy po lewej + wyśrodkowane ===== */
+/* ===== TOP BAR ===== */
 .topbar{
   position: sticky; top:0; z-index:100;
   background:#000;
@@ -62,10 +62,19 @@ body{
 .topbar-wrap{
   max-width:1200px; margin:0 auto; padding:10px 16px;
   display:flex; justify-content:center; align-items:center; gap:12px; color:#fff;
+  position:relative; /* pozwala absolutnie pozycjonować logo po lewej */
 }
-.ca-line{
-  min-width:0; display:flex; align-items:center; gap:10px;
+/* NOWE: $WHISP w lewym górnym rogu */
+.logo-title{
+  position:absolute; left:16px; top:50%; transform:translateY(-50%);
+  font-family:'Creepster', system-ui, sans-serif;
+  font-size:28px; line-height:1;
+  color:#fff;
+  text-shadow:0 2px 0 rgba(0,0,0,.85), 0 0 18px rgba(56,255,122,.12);
+  pointer-events:none; /* klik nie koliduje z innymi elementami */
 }
+
+.ca-line{ min-width:0; display:flex; align-items:center; gap:10px; }
 .topbar .label{ font-weight:700; letter-spacing:.02em; }
 .topbar .value{
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
@@ -98,7 +107,7 @@ body{
   font-family: 'Creepster', system-ui, sans-serif;
   font-size: clamp(36px, 8vw, 110px);
   line-height: 1;
-  color: #ffffff; /* biały tekst */
+  color: #ffffff;
   text-shadow: 0 2px 0 rgba(0,0,0,.85), 0 0 18px rgba(56,255,122,.12);
 }
 
@@ -115,8 +124,8 @@ body{
   font-family:'Creepster', system-ui, sans-serif;
   font-size: clamp(28px, 6vw, 72px);
   letter-spacing:.04em;
-  color:#ffffff; /* biały napis */
-  background: transparent; /* brak tła */
+  color:#ffffff;
+  background: transparent;
   text-shadow: 0 2px 0 rgba(0,0,0,.85), 0 0 18px rgba(56,255,122,.12);
 }
 .grid{
@@ -124,86 +133,30 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap:20px;
 }
-/* ⇩⇩ Na desktopie zawsze 3 kolumny (dwie linie po trzy) */
 @media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .card{
   margin:0; 
-  background:#000;   /* cała karta czarna */
+  background:#000;
   border:none; 
   box-shadow:none;
 }
-
 .media{
-  position:relative; 
-  aspect-ratio:3/4; 
-  overflow:hidden; 
-  background:#000;   /* też czarne */
+  position:relative; aspect-ratio:3/4; overflow:hidden; background:#000;
 }
-
 .media img, .media video{
-  position:absolute; 
-  inset:0; 
-  width:100%; 
-  height:100%; 
-  object-fit:cover;
-  display:block;
-  background:#000;   /* czarne tło pod obrazkiem/filmem */
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  display:block; background:#000;
 }
+.media video{ opacity:0; transition:opacity .25s ease; }
+.media.playing video{ opacity:1; }
 
-.media video{ 
-  opacity:0; 
-  transition:opacity .25s ease; 
-}
+figcaption { padding:12px 12px 14px; text-align:left; background:#000; }
+figcaption h3 { margin:0 0 6px; font-size:18px; color:#fff; }
+figcaption p  { margin:0; font-size:14px; color:#fff; }
 
-.media.playing video{ 
-  opacity:1; 
-}
-
-figcaption {
-  padding:12px 12px 14px;
-  text-align:left;
-  background:#000;  /* czarny pasek */
-}
-
-figcaption h3 {
-  margin:0 0 6px;
-  font-size:18px;
-  color:#fff;   /* biały tekst */
-}
-
-figcaption p {
-  margin:0;
-  font-size:14px;
-  color:#fff;   /* biały opis */
-}
-
-/* Linki/akcje */
-.actions{ display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:wrap; }
-.btn{
-  display:inline-block; text-decoration:none; padding:12px 18px; border-radius:999px;
-  background: linear-gradient(180deg,#38ff7a,#0ab95e);
-  color:#06140e; font-weight:700; border:1px solid rgba(56,255,122,.5);
-}
-.btn.ghost{
-  background:#0e1612; color:#bff3cf; border:1px solid rgba(56,255,122,.3);
-}
-.btn:hover{ filter:brightness(1.05); }
-
-/* Responsive */
-@media (max-width:420px){
-  .topbar .value{ font-size:14px; }
-}
-
-/* DODATKOWA NAPRAWA — gdyby coś jeszcze nadpisywało */
-.grave-title mark {
-  background: transparent !important;
-  color: inherit !important;
-}
 /* ===== Social bar ===== */
 .social{
   display:flex; justify-content:center; gap:14px;
@@ -217,34 +170,29 @@ figcaption p {
   transition:transform .12s ease, filter .15s ease, box-shadow .15s ease;
 }
 .social__btn img{ width:60%; height:60%; object-fit:contain; display:block; }
-
 .social__btn:hover{ transform:translateY(-2px); filter:brightness(.92); }
 .social__btn:active{ transform:translateY(0); box-shadow:0 1px 0 #000, 0 6px 18px rgba(0,0,0,.4); }
 .social__btn:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-color:#000; }
-
 @media (max-width:420px){
   .social{ gap:10px; padding-bottom:40px; }
   .social__btn{ width:50px; height:50px; border-radius:12px; }
 }
+
 /* ===== Disclaimer ===== */
 .disclaimer{
   max-width: 1100px;
   margin: 0 auto;
   padding: 12px 16px 48px;
-  color: #9aa3a3;         /* szary */
+  color: #9aa3a3;
   font-size: 14px;
   line-height: 1.35;
   letter-spacing: .02em;
-  text-align: center;     /* WYŚRODKOWANIE */
+  text-align: center;
   opacity: .95;
 }
-
-/* na większych ekranach odrobinę większa czcionka */
 @media (min-width: 768px){
   .disclaimer{ font-size: 15px; }
 }
 
-/* Żeby span zachowywał się jak link w stopce */
-.social__btn {
-  cursor: pointer; /* da rączkę zamiast zwykłego kursora */
-}
+/* Telegram w stopce to <span>, ale niech wygląda jak klikany */
+.social__btn{ cursor:pointer; }
