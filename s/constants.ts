@@ -1,4 +1,4 @@
 export const constants = {
-	domain: "example.app",
+	domain: "vaultverse.app",
 	favicon: "/assets/logo/logo.png",
 }
