@@ -93,7 +93,7 @@ export default ssg.page(import.meta.url, async orb => {
             </div>
             <figcaption>
               <h3>subject 02</h3>
-              <p>last seen: staring at a blank screen; eyes kept moving.</p>
+              <p>cause of death: jaw locked in a smile that wasn’t his.</p>
             </figcaption>
           </figure>
 
@@ -105,7 +105,7 @@ export default ssg.page(import.meta.url, async orb => {
             </div>
             <figcaption>
               <h3>subject 03</h3>
-              <p>cause of silence: hands on the glass, breath on the other side.</p>
+              <p>cause of death: hands on the glass, breath on the other side.</p>
             </figcaption>
           </figure>
 
@@ -117,7 +117,7 @@ export default ssg.page(import.meta.url, async orb => {
             </div>
             <figcaption>
               <h3>subject 04</h3>
-              <p>cause of silence: no reflection in the mirror.</p>
+              <p>cause of death: no reflection in the mirror.</p>
             </figcaption>
           </figure>
 
@@ -129,7 +129,7 @@ export default ssg.page(import.meta.url, async orb => {
             </div>
             <figcaption>
               <h3>subject 05</h3>
-              <p>last seen: whispering names that were never his.</p>
+              <p>cause of death: whispering names that were never his.</p>
             </figcaption>
           </figure>
 
@@ -141,7 +141,7 @@ export default ssg.page(import.meta.url, async orb => {
             </div>
             <figcaption>
               <h3>subject 06</h3>
-              <p>cause of disappearance: followed shadows too far.</p>
+              <p>cause of death: followed shadows too far.</p>
             </figcaption>
           </figure>
         </div>
