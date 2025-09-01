@@ -146,13 +146,13 @@ export default ssg.page(import.meta.url, async orb => {
 
   <!-- SOCIAL BAR -->
   <footer class="social">
-    <a class="social__btn" href="https://t.me/yourchannel" target="_blank" rel="noopener">
+    <a class="social__btn" href="" target="_blank" rel="noopener">
       <img src="/assets/logo/telegram.png" alt="Telegram" loading="lazy">
     </a>
-    <a class="social__btn" href="https://x.com/yourprofile" target="_blank" rel="noopener">
+    <a class="social__btn" href="https://x.com/trenchtroll452" target="_blank" rel="noopener">
       <img src="/assets/logo/x.png" alt="X (Twitter)" loading="lazy">
     </a>
-    <a class="social__btn" href="https://dexscreener.com/your-token" target="_blank" rel="noopener">
+    <a class="social__btn" href="" target="_blank" rel="noopener">
       <img src="/assets/logo/pump.png" alt="Owl Tracker" loading="lazy">
     </a>
   </footer>
