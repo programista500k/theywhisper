@@ -81,7 +81,7 @@ export default ssg.page(import.meta.url, async orb => {
   </div>
   <figcaption>
     <h3>subject 01</h3>
-    <p>cause of disappearance: found whispering at the vault door.</p>
+    <p>cause of death: every piece of her stored in someone else’s stomach.</p>
   </figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ export default ssg.page(import.meta.url, async orb => {
             </div>
             <figcaption>
               <h3>subject 03</h3>
-              <p>cause of death: hands on the glass, breath on the other side.</p>
+              <p>cause of death: legs kept running long after the heart stopped.</p>
             </figcaption>
           </figure>
 
@@ -117,7 +117,7 @@ export default ssg.page(import.meta.url, async orb => {
             </div>
             <figcaption>
               <h3>subject 04</h3>
-              <p>cause of death: no reflection in the mirror.</p>
+              <p>cause of death: staring too long, glass whispered first.</p>
             </figcaption>
           </figure>
 
