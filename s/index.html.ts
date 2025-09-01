@@ -146,7 +146,7 @@ export default ssg.page(import.meta.url, async orb => {
 
   <!-- SOCIAL BAR -->
   <footer class="social">
-    <a class="social__btn" href="javascript:void(0)">
+    <a class="social__btn"
   <img src="/assets/logo/telegram.png" alt="Telegram" loading="lazy">
 </a>
     <a class="social__btn" href="https://x.com/trenchtroll452" target="_blank" rel="noopener">
