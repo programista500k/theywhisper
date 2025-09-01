@@ -23,61 +23,144 @@ export default ssg.page(import.meta.url, async orb => {
 			</script>
 		`,
 		body: html`
-<!-- INTRO WITH FACE -->
-<div id="intro" aria-hidden="true">
-  <div class="scan"></div>
-  <!-- Podmień src na swój plik/URL -->
-  <img src="https://i.postimg.cc/qRmy5nrr/unnamed.png" alt="loading face" />
-</div>
+<!-- ====== HEAD (w CodePen: wklej w panel HTML) ====== -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&display=swap" rel="stylesheet" />
 
-<!-- BACKGROUND AUDIO (podmień na publiczny URL https) -->
-<audio id="whispers" src="AUDIO_URL_HERE.mp3" loop></audio>
-
-<!-- 1) THE OATH -->
-<section id="oath" class="section">
-  <div class="container">
-    <h1>you are not supposed to be here.</h1>
-    <p class="lead"><span class="flicker">this room was meant to stay dark.</span></p>
-    <a class="proceed" href="#circle">PROCEED</a>
-    <div class="note mono">press — or scroll — at your own risk</div>
+<body>
+  <!-- INTRO: creepy face + tagline -->
+  <div id="intro" aria-hidden="true">
+    <div class="scan"></div>
+    <img
+      class="intro-face"
+      src="https://i.postimg.cc/qRmy5nrr/unnamed.png"
+      alt="creepy face"
+    />
+    <p class="intro-tag">you are not supposed to be here</p>
   </div>
-</section>
 
-<!-- 2) THE CIRCLE -->
-<section id="circle" class="section">
-  <div class="container ascii">
-    <div class="sigils">△  ◼  ✝  ◯  ☍  ⌘  ☌</div>
-    <h1>the ritual has started.</h1>
-    <p class="lead mono"><span id="typing"></span><span class="caret"></span></p>
-  </div>
-</section>
+  <!-- TOPBAR: CA – wyśrodkowany; Copy po lewej -->
+  <header id="topbar" class="topbar">
+    <div class="topbar-wrap">
+      <button id="copyCA" class="copy-btn" aria-label="Copy contract address">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path d="M9 3h6a2 2 0 012 2v1h1a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2h1V5a2 2 0 012-2zm0 3h6V5H9v1z" fill="currentColor"/>
+        </svg>
+        <span>Copy</span>
+      </button>
 
-<!-- 3) THE WHISPERS -->
-<section id="whispersSection" class="section">
-  <div class="whisper-cloud" id="cloud">ASCEND</div>
-  <div class="container">
-    <h1>do not listen to the walls.</h1>
-    <p class="lead">they keep everything you say. and repeat it when you sleep.</p>
-  </div>
-</section>
+      <div class="ca-line">
+        <strong class="label">CA:</strong>
+        <span id="caText" class="value">
+          just launched
+        </span>
+      </div>
+    </div>
+  </header>
 
-<!-- 4) THE OFFERING -->
-<section id="offering" class="section">
-  <div class="container">
-    <h1>the offering</h1>
-    <div class="terminal mono" id="term"></div>
-    <p class="lead">the gate measures what you have. then opens anyway.</p>
-  </div>
-</section>
+  <main>
+    <!-- HERO: flicker line -->
+    <section id="hero" class="section">
+      <div class="container">
+        <h1 class="flicker">this room was meant to stay dark.</h1>
+      </div>
+    </section>
 
-<!-- 5) THE DESCENT -->
-<section id="descent" class="section">
-  <div class="container">
-    <h1 class="pulse">welcome to vaultverse</h1>
-    <p class="lead">we were waiting.</p>
-    <div class="note mono">there is no way back, only deeper links.</div>
-  </div>
-</section>
+    <!-- GRAVEYARD -->
+    <section id="graveyard" class="section">
+      <div class="container">
+        <h2 class="grave-title">graveyard</h2>
+
+        <div class="grid">
+          <!-- KARTA 01 -->
+          <figure class="card">
+            <div class="media">
+              <img src="https://i.postimg.cc/bvSM3nB2/image-2025-09-01-145612571.png" alt="subject 01" />
+              <video muted playsinline preload="metadata" src="REPLACE_VIDEO_URL_1.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 01</h3>
+              <p>cause of disappearance: found whispering at the vault door.</p>
+            </figcaption>
+          </figure>
+
+          <!-- KARTA 02 -->
+          <figure class="card">
+            <div class="media">
+              <img src="REPLACE_IMAGE_URL_2.jpg" alt="subject 02" />
+              <video muted playsinline preload="metadata" src="REPLACE_VIDEO_URL_2.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 02</h3>
+              <p>last seen: staring at a blank screen; eyes kept moving.</p>
+            </figcaption>
+          </figure>
+
+          <!-- KARTA 03 -->
+          <figure class="card">
+            <div class="media">
+              <img src="REPLACE_IMAGE_URL_3.jpg" alt="subject 03" />
+              <video muted playsinline preload="metadata" src="REPLACE_VIDEO_URL_3.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 03</h3>
+              <p>cause of silence: hands on the glass, breath on the other side.</p>
+            </figcaption>
+          </figure>
+
+          <!-- KARTA 04 -->
+          <figure class="card">
+            <div class="media">
+              <img src="REPLACE_IMAGE_URL_4.jpg" alt="subject 04" />
+              <video muted playsinline preload="metadata" src="REPLACE_VIDEO_URL_4.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 04</h3>
+              <p>cause of silence: no reflection in the mirror.</p>
+            </figcaption>
+          </figure>
+
+          <!-- KARTA 05 -->
+          <figure class="card">
+            <div class="media">
+              <img src="REPLACE_IMAGE_URL_5.jpg" alt="subject 05" />
+              <video muted playsinline preload="metadata" src="REPLACE_VIDEO_URL_5.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 05</h3>
+              <p>last seen: whispering names that were never his.</p>
+            </figcaption>
+          </figure>
+
+          <!-- KARTA 06 -->
+          <figure class="card">
+            <div class="media">
+              <img src="REPLACE_IMAGE_URL_6.jpg" alt="subject 06" />
+              <video muted playsinline preload="metadata" src="REPLACE_VIDEO_URL_6.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 06</h3>
+              <p>cause of disappearance: followed shadows too far.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINKI -->
+    <section id="links" class="section compact">
+      <div class="container actions">
+        <a class="btn" href="https://twitter.com/vaultversecoin" target="_blank" rel="noopener noreferrer">
+          Twitter Community
+        </a>
+        <a class="btn ghost" href="https://pump.fun" target="_blank" rel="noopener noreferrer">
+          pump.fun coin
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
 
 		`,
 	})
