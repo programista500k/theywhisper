@@ -74,16 +74,16 @@ export default ssg.page(import.meta.url, async orb => {
 
         <div class="grid">
           <!-- KARTA 01 -->
-          <figure class="card">
-            <div class="media">
-              <img src="/assets/logo/sub1.png" alt="subject 01" />
-              <video muted playsinline preload="metadata" src="/assets/logo/sub1.mp4"></video>
-            </div>
-            <figcaption>
-              <h3>subject 01</h3>
-              <p>cause of disappearance: found whispering at the vault door.</p>
-            </figcaption>
-          </figure>
+<figure class="card">
+  <div class="media">
+    <img src="/assets/logo/sub1.png" alt="subject 01" />
+    <video muted playsinline loop preload="metadata" src="/assets/logo/sub1.mp4"></video>
+  </div>
+  <figcaption>
+    <h3>subject 01</h3>
+    <p>cause of disappearance: found whispering at the vault door.</p>
+  </figcaption>
+</figure>
 
           <!-- KARTA 02 -->
           <figure class="card">
