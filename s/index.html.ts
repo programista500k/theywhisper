@@ -78,7 +78,7 @@ export default ssg.page(import.meta.url, async orb => {
   <div class="media">
     <!-- statyczna miniatura (pokazywana domyślnie) -->
     <img
-      src="sub1.jpg"            <!-- tu wstaw ścieżkę do statycznego zdjęcia: .jpg/.png -->
+      src="sub1.png"            <!-- tu wstaw ścieżkę do statycznego zdjęcia: .jpg/.png -->
       alt="subject 01 — fixed stare"
       loading="lazy"
     />
@@ -90,7 +90,7 @@ export default ssg.page(import.meta.url, async orb => {
       playsinline
       loop
       preload="metadata"
-      poster="sub1.jpg"         <!-- ten sam kadr co w <img> (unikniesz mignięcia) -->
+      poster="sub1.png"         <!-- ten sam kadr co w <img> (unikniesz mignięcia) -->
     ></video>
   </div>
 
