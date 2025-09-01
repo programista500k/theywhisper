@@ -73,32 +73,17 @@ export default ssg.page(import.meta.url, async orb => {
         <h2 class="grave-title">graveyard</h2>
 
         <div class="grid">
-          <!-- KARTA 01 (static image -> motion on hover) -->
-<figure class="card">
-  <div class="media">
-    <!-- statyczna miniatura (pokazywana domyślnie) -->
-    <img
-      src="sub1.png"            <!-- tu wstaw ścieżkę do statycznego zdjęcia: .jpg/.png -->
-      alt="subject 01 — fixed stare"
-      loading="lazy"
-    />
-
-    <!-- film, który odpala się po najechaniu/kliknięciu (mobile) -->
-    <video
-      src="sub1.mp4"            <!-- tu ścieżka do filmu -->
-      muted
-      playsinline
-      loop
-      preload="metadata"
-      poster="sub1.png"         <!-- ten sam kadr co w <img> (unikniesz mignięcia) -->
-    ></video>
-  </div>
-
-  <figcaption>
-    <h3>subject 01</h3>
-    <p>cause of disappearance: found whispering at the vault door.</p>
-  </figcaption>
-</figure>
+          <!-- KARTA 01 -->
+          <figure class="card">
+            <div class="media">
+              <img src="/assets/logo/sub1.png" alt="subject 01" />
+              <video muted playsinline preload="metadata" src="/assets/logo/sub1.mp4"></video>
+            </div>
+            <figcaption>
+              <h3>subject 01</h3>
+              <p>cause of disappearance: found whispering at the vault door.</p>
+            </figcaption>
+          </figure>
 
           <!-- KARTA 02 -->
           <figure class="card">
