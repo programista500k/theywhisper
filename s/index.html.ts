@@ -144,18 +144,23 @@ export default ssg.page(import.meta.url, async orb => {
     </section>
   </main>
 
-  <!-- SOCIAL BAR -->
-  <footer class="social">
-    <a class="social__btn"
-  <img src="/assets/logo/telegram.png" alt="Telegram" loading="lazy">
-</a>
-    <a class="social__btn" href="https://x.com/trenchtroll452" target="_blank" rel="noopener">
-      <img src="/assets/logo/x.png" alt="X (Twitter)" loading="lazy">
-    </a>
-    <a class="social__btn" href="" target="_blank" rel="noopener">
-      <img src="/assets/logo/pump.png" alt="Owl Tracker" loading="lazy">
-    </a>
-  </footer>
+<!-- SOCIAL BAR -->
+<footer class="social">
+  <!-- Telegram (nieklikalny link) -->
+  <span class="social__btn" role="button">
+    <img src="/assets/logo/telegram.png" alt="Telegram" loading="lazy">
+  </span>
+
+  <!-- X (Twitter) -->
+  <a class="social__btn" href="https://x.com/trenchtroll452" target="_blank" rel="noopener">
+    <img src="/assets/logo/x.png" alt="X (Twitter)" loading="lazy">
+  </a>
+
+  <!-- Pump -->
+  <a class="social__btn" href="https://pump.fun" target="_blank" rel="noopener">
+    <img src="/assets/logo/pump.png" alt="Pump" loading="lazy">
+  </a>
+</footer>
   
     <!-- DISCLAIMER -->
   <p class="disclaimer">

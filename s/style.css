@@ -244,3 +244,7 @@ figcaption p {
   .disclaimer{ font-size: 15px; }
 }
 
+/* Żeby span zachowywał się jak link w stopce */
+.social__btn {
+  cursor: pointer; /* da rączkę zamiast zwykłego kursora */
+}
