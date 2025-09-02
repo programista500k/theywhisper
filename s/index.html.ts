@@ -3,7 +3,7 @@ import {constants} from "./constants.js"
 import {socialCard} from "./website/social-card.js"
 
 export default ssg.page(import.meta.url, async orb => {
-  const title = "$WHISP"
+  const title = "$THEY"
 
   return ({
     title,
@@ -33,7 +33,7 @@ export default ssg.page(import.meta.url, async orb => {
   <!-- TOPBAR -->
   <header id="topbar" class="topbar">
     <!-- Logo przy lewym brzegu okna -->
-    <div class="logo-title">$WHISP</div>
+    <div class="logo-title">$THEY</div>
 
     <div class="topbar-wrap">
       <button id="copyCA" class="copy-btn" aria-label="Copy contract address">
@@ -160,7 +160,7 @@ export default ssg.page(import.meta.url, async orb => {
 
   <!-- DISCLAIMER -->
   <p class="disclaimer">
-    $WHISP is a memecoin with no intrinsic value. Its only purpose is entertainment,
+    $THEY is a memecoin with no intrinsic value. Its only purpose is entertainment,
     so you should invest only the amount you are willing to part with.
   </p>
 </body>
